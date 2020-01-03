@@ -49,17 +49,18 @@ Specialite VARCHAR(30) ) ' ;
 
 $Hospitalisation = 'CREATE TABLE Hospitalisation(
 NumPat INT(6) PRIMARY KEY,
-DateEntree VARCHAR(30) PRIMARY KEY,
-NumSalle INT(6) PRIMARY KEY ,
+DateEntree VARCHAR(30) ,
+NumSalle INT(6) ,
 NumService INT(6),
 DateSortie VARCHAR(30) ) ' ;
 
-$Acte='CREATE TABLE Hospitalisation(
-NumMed INT(6) PRIMARY KEY,
-NumPat INT(6) PRIMARY KEY,
-DateActe VARCHAR(30) PRIMARY KEY ,
+$Acte='CREATE TABLE Acte(
+NumMed INT(6) PRIMARY KEY ,
+NumPat INT(6) ,
+DateActe VARCHAR(30) ,
 NumService INT(6),
-Description VARCHAR(50) ) ' ;
+Description VARCHAR(50)
+ ) ' ;
 
 $base = new mysqli('localhost', 'root', '', 'Projet'); // On creer la connexion
 if ($base->query($Service)) {
@@ -85,8 +86,8 @@ if ($base->query($Acte)) {
     echo "Table Acte created successfully";
 }
 $base->close();
-  header('Location: http://localhost/ProjetBdD/');
+  //header('Location: http://localhost/ProjetBdD/');
  // Redirige vers la page de creation de Bdd (pour le style)
-  exit();
+  //exit();
 
 ?>

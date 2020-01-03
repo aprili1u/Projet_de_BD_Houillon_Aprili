@@ -14,7 +14,7 @@
          <button type="submit">Supprimer BdD</button>
       </form>
 	  
-	  <form action="ajoutmanuel.php">
+	  <form action="ajoutmanuel.html">
          <button type="submit">Ajouter donnees a la main</button>
       </form>
 	  
