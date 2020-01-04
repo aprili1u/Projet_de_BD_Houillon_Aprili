@@ -12,22 +12,15 @@
 			<li><a href="acte.php">Acte</a></li>
 		</ul>
 	</li>
-</ul>
-<h2>Pour remplir la table patient : </h2>
-<form action = "remplissagemainpatient.php" method="post">
-NumeroPatient : <input type = "text" name = "NumPat"><br />
-"Nom" : <input type = "text" name = "Nom"><br />
-"Prenom" : <input type = "text" name = "Prenom"><br />
-"Mutuelle" : <input type = "text" name = "Mutuelle"><br />
+</ul>Pour remplir la table acte : </h2>
+<form action = "remplissagemainacte.php" method="post">
+NumMed : <input type = "text" name = "NumMed"><br />
+NumPat : <input type = "text" name = "NumPat"><br />
+DateActe : <input type = "text" name = "DateActe"><br />
+Numervice : <input type = "text" name = "NumService"><br />
+"Description": <input type = "text" name = "Description"><br />
 <input type = "submit" value = "Envoyer">
 </form>
-
-<h3> Avec un fichier csv </h3>
-<form method="post" enctype="multipart/form-data" action="importpatient.php">
-<input name="userfile" type="file" value="table" />
-<input name="submit" type="submit" value="Importer" />
-</form>
-
 <style>
 #menu-demo2, #menu-demo2 ul{
 padding:0;

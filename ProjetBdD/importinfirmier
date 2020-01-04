@@ -11,7 +11,8 @@ Importation echouee
 $c=0 ;?>
 Importation reussie
 <?php 
-while (!feof($fp)){
+
+while (!feof($fp) and c>1){
 $ligne =fgets($fp,4096);
 $liste= explode(";",$ligne) ;
 $table = filter_input(INPUT_POST,'userfile');
@@ -23,7 +24,8 @@ $champs1=$liste[0];
 $champs2=$liste[1];
 $champs3=$liste[2];
 $champs4=$liste[3];
-echo "INSERT INTO salle VALUES ($champs1,'$champs2','$champs3',$champs4);" ;
+$c=$c+1;
+echo "INSERT INTO infirmier VALUES ($champs1,'$champs2','$champs3',$champs4);" ;
 if ($champs1!='')
 {
 	$c++;

@@ -8,10 +8,11 @@ Importation echouee
 <?php exit() ;}
 
 
-$c=0 ;?>
+;?>
 Importation reussie
 <?php 
-while (!feof($fp)){
+$c=0 ;
+while (!feof($fp) ){
 $ligne =fgets($fp,4096);
 $liste= explode(";",$ligne) ;
 $table = filter_input(INPUT_POST,'userfile');
@@ -23,13 +24,15 @@ $champs1=$liste[0];
 $champs2=$liste[1];
 $champs3=$liste[2];
 $champs4=$liste[3];
-echo "INSERT INTO salle VALUES ($champs1,'$champs2','$champs3',$champs4);" ;
-if ($champs1!='')
+
+$c++;
+if ($champs1!='' and $c>1)
 {
-	$c++;
+
 	$db = new mysqli('localhost','root','','Projet') ;
 	$sql =("INSERT INTO infirmier VALUES ($champs1,'$champs2','$champs3',$champs4);");
 	$resul= $db ->query($sql);
-}}
+}$c++;
+}
 fclose($fp);
 ?>

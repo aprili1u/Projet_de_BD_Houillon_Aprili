@@ -13,17 +13,16 @@
 		</ul>
 	</li>
 </ul>
-<h2>Pour remplir la table patient : </h2>
-<form action = "remplissagemainpatient.php" method="post">
-NumeroPatient : <input type = "text" name = "NumPat"><br />
+<h2>Pour remplir la table service : </h2>
+<form action = "remplissagemainservice.php" method="post">
+NumeroService : <input type = "text" name = "NumService"><br />
 "Nom" : <input type = "text" name = "Nom"><br />
-"Prenom" : <input type = "text" name = "Prenom"><br />
-"Mutuelle" : <input type = "text" name = "Mutuelle"><br />
+Batiment : <input type = "text" name = "Batiment"><br />
+NumMed : <input type = "text" name = "NumMed"><br />
 <input type = "submit" value = "Envoyer">
 </form>
-
 <h3> Avec un fichier csv </h3>
-<form method="post" enctype="multipart/form-data" action="importpatient.php">
+<form method="post" enctype="multipart/form-data" action="importservice.php">
 <input name="userfile" type="file" value="table" />
 <input name="submit" type="submit" value="Importer" />
 </form>

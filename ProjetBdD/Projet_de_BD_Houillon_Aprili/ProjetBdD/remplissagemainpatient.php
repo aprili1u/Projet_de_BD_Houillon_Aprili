@@ -1,7 +1,7 @@
 
    <html>
     <head>
-    <title>Patient</title>
+    <title>Ma page de traitement</title>
     </head>
     <body>
     <?php
@@ -13,6 +13,6 @@
     echo "Requete ajoutee avec succes. Vous allez etre redirigees vers la page d'ajout";
 }
     ?>
-	<meta http-equiv="refresh" content="4;URL=ajoutmanuel.html"> 
+	<meta http-equiv="refresh" content="4;URL=ajoutmanuel.php"> 
     </body>
     </html>

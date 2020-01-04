@@ -24,11 +24,10 @@ NumMed INT(6)
 ) ';
 
 $Salle ='CREATE TABLE Salle (
-NumSalle INT(6) ,
-NumServ INT(6) NOT NULL,
+NumSalle INT(6) PRIMARY KEY,
+NumSer INT(6) NOT NULL,
 Nblits INT(6) NOT NULL ,
-NumInf INT(6),
-constraint pk_t primary key (NumSalle, NumServ)
+NumInf INT(6) 
 ) ' ;
 
 $Infirmier = 'CREATE TABLE Infirmier (
@@ -49,21 +48,18 @@ Nom VARCHAR(30),
 Specialite VARCHAR(30) ) ' ;
 
 $Hospitalisation = 'CREATE TABLE Hospitalisation(
-NumPat INT(6) ,
+NumPat INT(6) PRIMARY KEY,
 DateEntree VARCHAR(30) ,
 NumSalle INT(6) ,
 NumService INT(6),
-DateSortie VARCHAR(30),
-constraint pk_t primary key (NumPat, DateEntree,NumSalle) 
-) ' ;
+DateSortie VARCHAR(30) ) ' ;
 
 $Acte='CREATE TABLE Acte(
-NumMed INT(6)  ,
+NumMed INT(6) PRIMARY KEY ,
 NumPat INT(6) ,
 DateActe VARCHAR(30) ,
 NumService INT(6),
-Description VARCHAR(50),
-constraint pk_t primary key (NumMed, NumPat,DateActe) )
+Description VARCHAR(50)
  ) ' ;
 
 $base = new mysqli('localhost', 'root', '', 'Projet'); // On creer la connexion

@@ -23,12 +23,12 @@ $champs1=$liste[0];
 $champs2=$liste[1];
 $champs3=$liste[2];
 $champs4=$liste[3];
-echo "INSERT INTO salle VALUES ($champs1,'$champs2','$champs3',$champs4);" ;
+
 if ($champs1!='')
 {
 	$c++;
 	$db = new mysqli('localhost','root','','Projet') ;
-	$sql =("INSERT INTO infirmier VALUES ($champs1,'$champs2','$champs3',$champs4);");
+	$sql =("INSERT INTO avance(id,type,pourcentage,comm,date) VALUES ('',$champs1,'$champs2,'champs3')");
 	$resul= $db ->query($sql);
 }}
 fclose($fp);

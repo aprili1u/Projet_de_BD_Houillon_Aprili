@@ -1,14 +1,14 @@
 
    <html>
     <head>
-    <title>Patient</title>
+    <title>Acte</title>
     </head>
     <body>
     <?php
     
     $base = new mysqli('localhost', 'root', '', 'Projet'); // On creer la connexion
-	echo 'INSERT INTO patient VALUES ('.$_POST["NumPat"].','.$_POST["Nom"].','.$_POST["Prenom"].','.$_POST["Mutuelle"].')';
-	$requete = 'INSERT INTO patient VALUES ('.$_POST["NumPat"].','.$_POST["Nom"].','.$_POST["Prenom"].','.$_POST["Mutuelle"].')';
+	echo 'INSERT INTO acte VALUES ('.$_POST["NumMed"].','.$_POST["NumPat"].','.$_POST["DateActe"].','.$_POST["NumService"].','.$_POST["Description"].')';
+	$requete = 'INSERT INTO acte VALUES ('.$_POST["NumMed"].','.$_POST["NumPat"].','.$_POST["DateActe"].','.$_POST["NumService"].','.$_POST["Description"].')';
 	if ($base->query($requete)) {
     echo "Requete ajoutee avec succes. Vous allez etre redirigees vers la page d'ajout";
 }
