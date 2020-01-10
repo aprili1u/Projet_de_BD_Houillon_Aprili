@@ -30,5 +30,11 @@
  </p>
 </div>
 
+<div class="bouton">
+  <p>
+   <a href="interrogation.php">Interroger la base de donnees</a>
+ </p>
+</div>
+
 </body>
 </html>
