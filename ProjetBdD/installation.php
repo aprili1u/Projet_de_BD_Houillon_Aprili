@@ -50,10 +50,10 @@ Specialite VARCHAR(30) ) ' ;
 
 $Hospitalisation = 'CREATE TABLE Hospitalisation(
 NumPat INT(6) ,
-DateEntree VARCHAR(30) ,
+DateEntree DATETIME ,
 NumSalle INT(6) ,
 NumService INT(6),
-DateSortie VARCHAR(30),
+DateSortie DATETIME,
 constraint pk_t primary key (NumPat, DateEntree,NumSalle) 
 ) ' ;
 
@@ -63,8 +63,7 @@ NumPat INT(6) ,
 DateActe VARCHAR(30) ,
 NumService INT(6),
 Description VARCHAR(50),
-constraint pk_t primary key (NumMed, NumPat,DateActe) )
- ) ' ;
+constraint pk_t primary key (NumMed, NumPat,DateActe) ) ' ;
 
 $base = new mysqli('localhost', 'root', '', 'Projet'); // On creer la connexion
 if ($base->query($Service)) {
