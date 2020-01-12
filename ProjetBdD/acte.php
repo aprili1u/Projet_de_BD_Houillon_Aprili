@@ -21,6 +21,11 @@ Numervice : <input type = "text" name = "NumService"><br />
 "Description": <input type = "text" name = "Description"><br />
 <input type = "submit" value = "Envoyer">
 </form>
+<h3> Avec un fichier csv </h3>
+<form method="post" enctype="multipart/form-data" action="importacte.php">
+<input name="userfile" type="file" value="table" />
+<input name="submit" type="submit" value="Importer" />
+</form>
 <style>
 #menu-demo2, #menu-demo2 ul{
 padding:0;

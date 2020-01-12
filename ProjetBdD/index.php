@@ -26,7 +26,7 @@
 </div>
 <div class="bouton">
   <p>
-   <a href="modif.html">Modifier des donnes</a>
+   <a href="modif.php">Modifier des donnes</a>
  </p>
 </div>
 
